@@ -45,3 +45,11 @@ grid-row: 7/8;
 }
 
 /* U N D E R  F O R S I D E */
+
+
+/* T E M A  S I D E R */
+.grid1_1 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
