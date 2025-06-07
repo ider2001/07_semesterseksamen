@@ -244,7 +244,7 @@ h3:hover {
     --overlay-color-1: #4B3935;
     --overlay-color-2: #B36633;
     --overlay-color-3: rgba(232, 223, 204, 0.5);
-    --anim-duration: 10s;
+    --anim-duration: 5s;
 }
 
 
@@ -350,7 +350,7 @@ font-size: 3rem;
   text-decoration: none;
 }
 
-@media (min-width: 800px) {
+@media (min-width: 600px) {
   header {
     position: sticky;
     top: 0;
@@ -421,7 +421,7 @@ font-size: 3rem;
   display: none;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 600px) {
 header {
     position: sticky;
     top: 0;
@@ -431,7 +431,9 @@ header {
     padding: 20px;
     background-color: var(--primary-color);
     box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+    z-index: 40;
 }
+
 .logo {
     position: absolute;
     left: 20px;
@@ -442,14 +444,15 @@ header {
     display: none;
     position: absolute;
     z-index: 40;
-   
+
   }
+
   .burger {
     display: flex;
     flex-direction: column;
     position: relative;
         left: 440px;  
-        
+ 
   }
 
     .burger.active .line {
@@ -488,13 +491,12 @@ header {
     z-index: 40;
     text-align: end;
     padding-top: 30px;
-    
-
+    height: 100vh; 
   }
+
 
   nav.active .menu li {
     margin: 20px 20px;
-
   }
 
   nav.active .menu a {
