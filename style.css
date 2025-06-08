@@ -64,6 +64,15 @@ h2 {
   color: var(--secondary-color);
 }
 
+h3 {
+    font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 20px;
+  color: var(--secondary-color);
+  font-size: 1.5rem;
+}
+
 p{
 font-family: "Maitree", serif;
   font-weight: 400;
@@ -284,7 +293,6 @@ font-family: "Raleway", sans-serif;
 
 /*  P O R T F O L I O */
 .portfolio {
-  /*background: linear-gradient(0deg,rgba(75, 57, 53, 1) 0%, rgba(179, 102, 51, 1) 50%, rgba(75, 57, 53, 1) 100%);*/
     padding-top: 300px;
     padding-bottom: 76px;
     text-align: center;
@@ -319,26 +327,56 @@ animation: bounce2 2s ease infinite;
 }
 
 
-.infoboks{  
-  font-family: "Raleway", sans-serif;
-  font-weight: 400;
-  font-style: normal;
-  color: var(--primary-color);
-  text-align: center;
-  margin-bottom: 20px;
+.box {
+  width: 180px;
+  height: 180px;
+  border: 2px solid var(--secondary-color);
   background-color: var(--secondary-color-50);
-  border-radius: 50px;
-  border-style: solid; 
-  padding: 50px 20px;
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  position: relative;
+  cursor: pointer;
+  margin: 20px;
 }
 
-.infoboks:hover::after {
-  content: url();
+.box h3, .box a {
+  position: absolute;
+  transition: opacity 0.3s ease;
 }
 
-.infoboks :hover {
+.box a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.box:hover h3 {
+  opacity: 0;
+}
+
+.box:hover {
   background-color: var(--tertiary-color);
-    color: var(--secondary-color);
+  border-color: var(--tertiary-color);
+}
+
+.box:hover a {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.portp {
+  text-align: center;
+  margin-bottom: 40px;
+  margin-left: 40px;
+  margin-right: 40px;
 }
 
 /* G R A I D I E N T */
@@ -403,6 +441,9 @@ z-index: -1;
   color: var(--secondary-color);
 text-align: center;
 font-size: 2.2rem;
+padding-top: 40px;
+padding-bottom: 40px;
+
 }
 
 .roundedimg {
@@ -514,6 +555,20 @@ font-family: "Raleway", sans-serif;
 .navn :hover {
     color: var(--link-hover-color);
 }
+
+.temamobil {
+  text-align: center;
+}
+
+/********************************************************************* D E S C T O P *******************************************************************/
+@media (min-width: 600px) {
+  
+
+
+
+
+}
+
 
 
 
