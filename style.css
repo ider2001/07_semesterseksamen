@@ -35,7 +35,9 @@ img {
 /* B A S E S T Y L E S */
 body {
     background-color: var(--primary-color);
+  overflow-x: hidden;
 }
+
 
 .logo {
     color: var(--secondary-color);
@@ -74,6 +76,7 @@ a {
    font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-style: normal; 
+
 }
 
 
@@ -113,6 +116,7 @@ font-family: "Alkalami", serif;
   width: 300px;
 background: linear-gradient(90deg,rgba(75, 57, 53, 1) 0%, rgba(232, 223, 204, 1) 100%);
   border-radius: 50%;
+  overflow: hidden;
   display: flex;
  flex-direction: column;
     justify-content: center;
@@ -139,6 +143,53 @@ background: linear-gradient(90deg,rgba(75, 57, 53, 1) 0%, rgba(232, 223, 204, 1)
     z-index: 2;
 }
 
+/* G R A D I E N T  F O R S I D E */
+
+:root{
+    --overlay-color-1: #4B3935;
+    --overlay-color-2: #B36633;
+    --overlay-color-3: rgba(232, 223, 204, 0.5);
+    --anim-duration: 2s;
+}
+
+
+#gradientdot {
+z-index: -1;
+    opacity: 0.8;
+    background: none;
+}
+
+#gradientdor:after,
+#gradientdot:before {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 0; bottom: 0; left: 0; right: 0;
+    border-radius: 50%;
+    filter: blur(20px);
+}
+
+#gradientdot:before {
+    background: linear-gradient(135deg, var(--overlay-color-2) 0%, var(--overlay-color-1) 25%, var(--overlay-color-2) 50%, var(--overlay-color-3) 75%, var(--overlay-color-1) 100%);
+    animation: OpacityAnim var(--anim-duration) ease-in-out 2s infinite alternate;
+    animation: rotateElement 40s linear infinite;
+}
+
+@keyframes rotateElement {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+#gradientdot:after {
+   background: linear-gradient(135deg, var(--overlay-color-2) 0%, var(--overlay-color-1) 25%, var(--overlay-color-2) 50%, var(--overlay-color-3) 75%, var(--overlay-color-1) 100%);
+    animation: OpacityAnim var(--anim-duration) ease-in-out calc(-1 * var(--anim-duration)) infinite alternate;
+}
+
+@keyframes OpacityAnim {
+    0%{opacity: 0.8}
+    100%{opacity: 0.0}
+}
+
 /* U N D E R F O R S I D E */
 .grid_1 {
 background-color: var(--secondary-color);
@@ -146,7 +197,7 @@ margin-top: 20px;
 text-align: center;
 padding-top: 30px;
 margin-bottom: 40px;
-padding-bottom: 300px;
+padding-bottom: 160px;
 padding-right: 20px;
 padding-left: 20px;
 }
@@ -179,6 +230,7 @@ font-family: "Maitree", serif;
   padding: 10px 20px;
   border-radius: 50px;
   position: relative;
+      top: 67px;
 }
 
 #a_f:hover {
@@ -187,40 +239,87 @@ font-family: "Maitree", serif;
 
 /*  F O O T E R  F O R S I D E */
 .dot2 {
-  height: 150px;
-  width: 150px;
-background: linear-gradient(90deg,rgba(75, 57, 53, 1) 0%, rgba(232, 223, 204, 1) 100%);
+  height: 186px;
+  width: 186px;
+background: linear-gradient(90deg,rgba(75, 57, 53, 1) 0%, rgba(179, 102, 51, 1) 100%);
   border-radius: 50%;
   display: flex;
  flex-direction: column;
     position: relative;
     z-index: -1;
-}
-.dot2:hover {
-  background: linear-gradient(90deg,rgba(75, 57, 53, 1) 0%, rgba(179, 102, 51, 1) 100%);
+top: -85px;
+left: 44px;
 }
 
 .svg {
-  width: 100px;
-  height: 100px;
+  width: 200px;
+  height: 50px;
   position: relative;
-  bottom: 20px;
-  right: 20px;
+  justify-self: right;
+}
 
+.kontaktinfo1 {
+font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  padding: 4px;
+    color: var(--secondary-color);
+ text-align: right;
+ font-size: 1rem;
+}
+
+.kontaktinfo1 :hover {
+    color: var(--link-hover-color);
+}
+
+.navn1 {
+    text-align: right;
+    color: var(--secondary-color);
+    font-family: "Alkalami", serif;
+    font-size: 2rem;
+}
+
+.navn1 :hover {
+    color: var(--link-hover-color);
 }
 
 /*  P O R T F O L I O */
 .portfolio {
   /*background: linear-gradient(0deg,rgba(75, 57, 53, 1) 0%, rgba(179, 102, 51, 1) 50%, rgba(75, 57, 53, 1) 100%);*/
     padding-top: 300px;
-    padding-bottom: 400px;
-    text-align: left;
+    padding-bottom: 76px;
+    text-align: center;
     display: flex;
     flex-direction: column;
     font-size: 3rem;
 }
 
-h3 {  
+.arrow {
+  border: solid;
+  color: var(--secondary-color);
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 10px;
+}
+
+.scrollarrow {
+  padding-top: 200px;
+ text-align: center;
+ animation-duration: 2s;
+animation: bounce2 2s ease infinite;
+}
+
+@keyframes bounce2 {
+	0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+	40% {transform: translateY(-30px);}
+	60% {transform: translateY(-15px);}
+}
+.down {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+}
+
+
+.infoboks{  
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-style: normal;
@@ -229,11 +328,15 @@ h3 {
   margin-bottom: 20px;
   background-color: var(--secondary-color-50);
   border-radius: 50px;
-  border-style: solid;
+  border-style: solid; 
   padding: 50px 20px;
 }
 
-h3:hover {
+.infoboks:hover::after {
+  content: url();
+}
+
+.infoboks :hover {
   background-color: var(--tertiary-color);
     color: var(--secondary-color);
 }
@@ -244,7 +347,7 @@ h3:hover {
     --overlay-color-1: #4B3935;
     --overlay-color-2: #B36633;
     --overlay-color-3: rgba(232, 223, 204, 0.5);
-    --anim-duration: 5s;
+    --anim-duration: 10s;
 }
 
 
@@ -260,15 +363,16 @@ z-index: -1;
     display: block;
     position: absolute;
     top: 0; bottom: 0; left: 0; right: 0;
+        filter: blur(20px);
 }
 
 #gradient:before {
-    background: linear-gradient(135deg, var(--overlay-color-2) 0%, var(--overlay-color-3) 50%,var(--overlay-color-1) 100%);
+    background: linear-gradient(135deg, var(--overlay-color-1) 0%, var(--overlay-color-1) 25%, var(--overlay-color-2) 50%, var(--overlay-color-3) 75%, var(--overlay-color-1) 100%);
     animation: OpacityAnim var(--anim-duration) ease-in-out 2s infinite alternate;
 }
 
 #gradient:after {
-    background: linear-gradient(135deg, var(--overlay-color-1) 0%, var(--overlay-color-3) 50%, var(--overlay-color-2) 100%);
+    background: linear-gradient(135deg, var(--overlay-color-1) 0%, var(--overlay-color-1) 25%, var(--overlay-color-2) 50%, var(--overlay-color-3) 75%, var(--overlay-color-1) 100%); 
     animation: OpacityAnim var(--anim-duration) ease-in-out calc(-1 * var(--anim-duration)) infinite alternate;
 }
 
@@ -277,22 +381,76 @@ z-index: -1;
     100%{opacity: 0.0}
 }
 
+
+
 /* O M  M I G */
-#kontaktknap {
-    font-family: "Raleway", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-    font-size: 1.5rem;
+
+
+.h1om{
+     font-family: "Alkalami", serif;
+  font-weight: 400;
+  font-style: normal;
     color: var(--primary-color);
+    font-size: 3rem;
+    text-align: left;
+}
+
+.h2om {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  padding: 20px;
+  color: var(--secondary-color);
+text-align: center;
+font-size: 2.2rem;
+}
+
+.roundedimg {
+    border-radius: 50%;
+    width: 150px;
+    height: 150px;
+    justify-self: center;
+}
+
+.pom {
+    text-align: center;
+    line-height: 45px;
+    margin: 20px;
+    padding-left:20px ;
+    padding-right: 20px;
+}
+
+
+.kontaktknap {
     background-color: var(--secondary-color-50);
-    padding: 10px 50px;
+    padding: 10px 0px;
     border-radius: 50px;
     border-color: #e8dfcc;
     border-style: solid;
+    justify-self: center;
+    margin-bottom: 100px;
 }
-#kontaktknap:hover {
-    background-color: var(--tertiary-color);
+
+.kontaktknap1 {
+  font-family:"Raleway", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.5rem;
     color: var(--secondary-color);
+        padding: 10px 50px;
+    border-radius: 50px;
+}
+
+.kontaktknap1:hover {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border-color: var(--tertiary-color);
+}
+
+.kontaktknap:hover {
+    background-color: var(--tertiary-color);
+    color: var(--primary-color);
+    border-color: var(--tertiary-color);
 }
 
 .andentopfarve {
@@ -312,31 +470,50 @@ background: linear-gradient(0deg,rgba(75, 57, 53, 1) 0%, rgba(179, 102, 51, 1) 1
     align-items: center;
     position: relative;
     margin: 0 auto;
-    top: 100px;
+    top: 50px;
    z-index: -1;
 }
 
+
 .connect {
   text-align: center;
-font-size: 3rem; 
+font-size: 4rem; 
 }
 
 .promo {
+    font-size: 2rem;
     text-align: center;
 }
 
 .kontaktinfo {
-    text-align: center;
+font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  padding: 10px;
+    color: var(--secondary-color);
+ text-align: center;
+}
+
+.kontaktinfo :hover {
+    color: var(--link-hover-color);
 }
 
 .svg_1 {
-    justify-content: center;
-    width: 100px;
-    height: 100px;
+    justify-self: center;
+    width: 150px;
+    height: 150px;
+
 }
 
-.navn {text-align: center;}
+.navn {
+    text-align: center;
+    color: var(--secondary-color);
+    font-family: "Alkalami", serif;
+    font-size: 2rem;
+}
 
+.navn :hover {
+    color: var(--link-hover-color);
+}
 
 
 
@@ -430,7 +607,7 @@ header {
     align-items: center;
     padding: 20px;
     background-color: var(--primary-color);
-    box-shadow: 0 10px 10px rgba(0, 0, 0, 0.1);
+   
     z-index: 40;
 }
 
