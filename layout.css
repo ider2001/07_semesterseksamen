@@ -59,13 +59,32 @@ grid-row: 7/8;
 
 /********************************************************************* D E S C T O P *******************************************************************/
 @media (min-width: 600px) {
+
+.grid-forside{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}    
   
 .grid1_1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 20px;
 }
+    /* K O N T A K  S I D E  F O O T E R*/
+.navnstart {
+    justify-items:flex-start;
+    padding-left: 50px;
+}
 
+.kontaktend {
+    justify-items: end;
+    padding-right: 50px;
+}
 
-  
+.grid_1_1_1 {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+}
+
 }
