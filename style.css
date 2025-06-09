@@ -567,10 +567,35 @@ font-family: "Raleway", sans-serif;
     color: var(--link-hover-color);
 }
 
+/* T E M A  S I D E R */
+
 .temamobil {
   text-align: center;
 }
 
+  .billede-container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .billede-1 {
+    width: 100%;
+    height: auto;
+    z-index: 1;
+  }
+
+  .billede-2 {
+    width: 80%;
+    height: auto;
+    position: absolute;
+    top: 16%; 
+    right: -25%; 
+    z-index: 2;
+  }
+
+ 
 /********************************************************************* D E S C T O P *******************************************************************/
 @media (min-width: 600px) { 
 
@@ -717,6 +742,15 @@ font-size: 4rem;
 padding-top: 60px;
 padding-bottom: 80px;
 
+}
+
+/*  T E M A  S I D E R */
+h2{
+  font-size: 3rem;
+}
+
+p{
+  font-size: 1.7rem;
 }
 
 }
