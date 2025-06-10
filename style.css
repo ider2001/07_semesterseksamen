@@ -930,8 +930,40 @@ text-align: center;
 font-size: 4rem;
 padding-top: 150px;
 padding-bottom: 80px;
-
 }
+
+.box {
+  width: 250px;
+  height: 250px;
+  border: 2px solid var(--secondary-color);
+  background-color: var(--secondary-color-50);
+  border-radius: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-self: center;
+  position: relative;
+  cursor: pointer;
+  margin: 20px;
+}
+
+.box a {
+  display: inline-block;
+  padding: 20px 40px;
+  background-color: var(--secondary-color);
+  color: var(--primary-color);
+  text-decoration: none;
+  border-radius: 20px;
+  opacity: 0;
+  pointer-events: none;
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.box h3 {
+  font-size: 2rem;
+}
+
 
 /* O M  M I G */
 
