@@ -59,7 +59,7 @@ h2 {
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-style: normal;
-  padding: 20px;
+  padding: 16px;
   color: var(--secondary-color);
 }
 
@@ -133,9 +133,6 @@ background: linear-gradient(90deg,rgba(75, 57, 53, 1) 0%, rgba(232, 223, 204, 1)
     margin: 0 auto;
     top: 100px;
     z-index: -1;
-}
-.dot:hover {
-  background: linear-gradient(90deg,rgba(75, 57, 53, 1) 0%, rgba(179, 102, 51, 1) 100%);
 }
 
 
@@ -321,7 +318,7 @@ font-family: "Raleway", sans-serif;
 }
 
 .scrollarrow {
-  padding-top: 200px;
+  padding-top: 150px;
  text-align: center;
  animation-duration: 2s;
 animation: bounce2 2s ease infinite;
@@ -438,6 +435,8 @@ z-index: -1;
   display: none;
 }
 
+
+
 .orangefade {
   background: linear-gradient(0deg,rgba(75, 57, 53, 1) 0%, rgba(179, 102, 51, 1) 100%);
 }
@@ -491,7 +490,6 @@ padding-bottom: 40px;
     padding-left:20px ;
     padding-right: 20px;
 }
-
 
 .kontaktknap {
     background-color: var(--secondary-color-50);
@@ -590,6 +588,15 @@ font-family: "Raleway", sans-serif;
 
 /* T E M A  S I D E R */
 
+.temamobil h1 {
+  font-size: 2.5rem;
+}
+
+.tematekst {
+  max-width: 400px;
+  justify-self: center;
+}
+
 .temamobil {
   text-align: center;
 }
@@ -620,6 +627,43 @@ font-family: "Raleway", sans-serif;
 /********************************************************************* D E S C T O P *******************************************************************/
 @media (min-width: 600px) { 
 
+  /* F O R S I D E */
+
+.title1 {
+font-family: "Alkalami", serif;
+  font-weight: 400;
+  font-size: 10rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: 20px;
+  z-index: 2;
+}
+.title2 {
+font-family: "Alkalami", serif;
+  font-weight: 400;
+  font-size: 10rem;
+  color: var(--secondary-color);
+  text-align: center;
+  margin-top: 20px;
+    z-index: 2;
+}
+
+.dot {
+  height: 400px;
+  width: 400px;
+background: linear-gradient(90deg,rgba(75, 57, 53, 1) 0%, rgba(232, 223, 204, 1) 100%);
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+ flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    top: 100px;
+    z-index: -1;
+}
+
 h1 {
   font-size: 7rem;
 }
@@ -648,7 +692,7 @@ padding-left: 20px;
   font-family: "Raleway", sans-serif;
   font-weight: 400;
   font-style: normal;
-  font-size: 2rem;
+  font-size: 3rem;
   padding: 20px;
   color: var(--secondary-color);
 }
@@ -660,6 +704,8 @@ font-family: "Maitree", serif;
     font-size: 1.2rem;
  color: var(--secondary-color);
  padding: 20px;
+ line-height: 40px;
+
   }
 
   #a_f{
@@ -682,14 +728,47 @@ font-family: "Maitree", serif;
 
 .kravul {
   display: block;
-visibility: visible;
+  visibility: visible;
   border-color: var(--secondary-color);
   border-style: solid;
   border-radius: 50px;
   border-width: 1px;
+  max-width: 490px;
+  justify-self: center;
+  padding: 20px; 
+}
+
+.kravul ul {
+  display: block;
+  list-style-type: disc !important;
+  padding-left: 20px; 
+  margin: 0; 
+  color: var(--secondary-color);
+}
+
+.kravf {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+  font-size: 1.5rem;
+  margin-top: 0; 
+}
+
+.kravul li {
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-style: normal; 
+  font-size: 1rem;
+  text-align: left;
+  color: var(--secondary-color);
+  line-height: 40px;
 }
 
 /*  F O O T E R  F O R S I D E */
+.footer {
+  margin-top: 123px;
+}
+
 .footerhide2 {
   display: block;
   visibility: visible;
@@ -767,6 +846,15 @@ font-family: "Raleway", sans-serif;
 
 /* P O R T F O L I O */
 
+.portfolio {
+    padding-top: 160px;
+    padding-bottom: 76px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    font-size: 3rem;
+}
+
 .h2om {
   font-family: "Raleway", sans-serif;
   font-weight: 200;
@@ -775,7 +863,7 @@ font-family: "Raleway", sans-serif;
   color: var(--secondary-color);
 text-align: center;
 font-size: 4rem;
-padding-top: 60px;
+padding-top: 300px;
 padding-bottom: 80px;
 
 }
@@ -795,9 +883,21 @@ padding-bottom: 80px;
   padding: 20px;
 }
 
+
+
 /*  T E M A  S I D E R */
+.temamobil h1 {
+  font-size: 4.5rem;
+}
+.tematekst {
+  max-width: 700px;
+  justify-self: center;
+  line-height: 50px;
+}
+
 h2{
   font-size: 3rem;
+  padding-bottom: 50px;
 }
 
 p{
