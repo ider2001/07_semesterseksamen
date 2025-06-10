@@ -103,6 +103,7 @@ z-index: 1;
     padding-bottom: 45px;
 }
 
+
     /* K O N T A K  S I D E  F O O T E R*/
 .navnstart {
     justify-items:flex-start;
@@ -117,6 +118,8 @@ z-index: 1;
 .grid_1_1_1 {
     display: grid;
     grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding-bottom: 40px;
 }
 
 /* K O N T A K  S I D E */
