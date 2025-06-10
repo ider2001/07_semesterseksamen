@@ -664,6 +664,18 @@ background: linear-gradient(90deg,rgba(75, 57, 53, 1) 0%, rgba(232, 223, 204, 1)
     z-index: -1;
 }
 
+.citat {
+  font-family: "Raleway", sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 1.2rem;
+  color: var(--secondary-color);
+  text-align: start;
+  margin-top: 20px;
+  margin-bottom: 40px;
+    z-index: 2;
+}
+
 h1 {
   font-size: 7rem;
 }
