@@ -642,6 +642,7 @@ padding: 5px;
 .tematekst {
   max-width: 400px;
   justify-self: center;
+  line-height: 30px;
 }
 
 .temamobil {
@@ -785,6 +786,7 @@ font-family: "Maitree", serif;
 }
 
 .kravul {
+  margin-top: 36px;
   display: block;
   visibility: visible;
   border-color: var(--secondary-color);
@@ -794,6 +796,7 @@ font-family: "Maitree", serif;
   max-width: 490px;
   justify-self: center;
   padding: 20px; 
+  background-color: var(--secondary-color-50);
 }
 
 .kravul ul {
@@ -806,20 +809,21 @@ font-family: "Maitree", serif;
 
 .kravf {
   font-family: "Raleway", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal; 
-  font-size: 1.5rem;
+  font-size: 1.7rem;
   margin-top: 0; 
+  color: var(--secondary-color);
 }
 
 .kravul li {
   font-family: "Raleway", sans-serif;
-  font-weight: 400;
+  font-weight: 500;
   font-style: normal; 
   font-size: 1rem;
   text-align: left;
   color: var(--secondary-color);
-  line-height: 40px;
+  line-height: 30px;
 }
 
 /*  F O O T E R  F O R S I D E */
@@ -1010,9 +1014,9 @@ padding-bottom: 30px;
   font-size: 4.5rem;
 }
 .tematekst {
-  max-width: 700px;
+  max-width: 600px;
   justify-self: center;
-  line-height: 50px;
+  line-height: 45px;
 }
 
 h2{
